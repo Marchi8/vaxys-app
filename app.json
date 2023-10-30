@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "vaxys-app",
-    "slug": "vaxys-app",
+    "name": "Vaxys",
+    "slug": "vaxys",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -21,10 +21,17 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#077067"
-      }
+      },
+      "package": "com.vaxysdev.vaxys"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "c0a5b550-8e5e-43ca-95a2-c091baaa0a73"
+      }
+    },
+    "owner": "vaxys-dev"
   }
 }
