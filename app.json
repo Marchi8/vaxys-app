@@ -18,6 +18,12 @@
       "supportsTablet": true
     },
     "android": {
+      "versionCode": 3,
+      "minSdkVersion": 33,
+      "targetSdkVersion": 33,
+      "permissions": [
+        "com.google.android.gms.permission.AD_ID"
+      ],
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#077067"
