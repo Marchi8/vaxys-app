@@ -2,7 +2,7 @@
   "expo": {
     "name": "Vaxys",
     "slug": "vaxys",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -18,7 +18,7 @@
       "supportsTablet": true
     },
     "android": {
-      "versionCode": 4,
+      "versionCode": 5,
       "minSdkVersion": 33,
       "targetSdkVersion": 33,
       "permissions": [
