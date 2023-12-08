@@ -24,6 +24,7 @@ export default function Home({ navigation }) {
     <View style={styles.container}>
       <View style={styles.webviewContainer}>
         <WebView
+          startInLoadingState={true}
           source={{ uri: "https://www.vaxys.com.br" }}
           style={styles.webview}
         />
