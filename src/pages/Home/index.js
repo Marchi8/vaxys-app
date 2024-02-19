@@ -24,8 +24,13 @@ export default function Home({ navigation }) {
     <View style={styles.container}>
       <View style={styles.webviewContainer}>
         <WebView
-          startInLoadingState={true}
           scalesPageToFit
+          javaScriptEnabled
+          domStorageEnabled
+          geolocationEnabled={true}
+          allowsCameraAccess={true}
+          startInLoadingState={true}
+          originWhitelist={["https://*", "http://*", "*"]}
           source={{ uri: "https://www.vaxys.com.br" }}
           style={styles.webview}
         />
