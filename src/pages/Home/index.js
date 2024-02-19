@@ -25,6 +25,7 @@ export default function Home({ navigation }) {
       <View style={styles.webviewContainer}>
         <WebView
           startInLoadingState={true}
+          scalesPageToFit
           source={{ uri: "https://www.vaxys.com.br" }}
           style={styles.webview}
         />
