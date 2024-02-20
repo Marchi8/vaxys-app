@@ -45,6 +45,14 @@
     },
     "updates": {
       "url": "https://u.expo.dev/c0a5b550-8e5e-43ca-95a2-c091baaa0a73"
-    }
+    },
+    "plugins": [
+      [
+        "expo-tracking-transparency",
+        {
+          "userTrackingPermission": "Vaxys utiliza o framework AppTrackingTransparency para coletar dados de uso e comportamento para entregar conteúdos personalizados para você."
+        }
+      ]
+    ]
   }
 }

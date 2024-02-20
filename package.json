@@ -17,6 +17,7 @@
     "expo-constants": "~14.4.2",
     "expo-dev-client": "~2.4.12",
     "expo-status-bar": "~1.6.0",
+    "expo-tracking-transparency": "^3.3.0",
     "expo-updates": "~0.18.17",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -30,8 +31,20 @@
     "react-native-web": "~0.19.6",
     "react-native-webview": "13.2.2"
   },
+  "expo": {
+    "plugins": [
+      [
+        "expo-tracking-transparency",
+        {
+          "userTrackingPermission": "NuRotulo utiliza o framework AppTrackingTransparency para coletar dados de uso e comportamento para entregar conteúdos personalizados para você."
+        }
+      ]
+    ]
+  },
   "devDependencies": {
     "@babel/core": "^7.20.0"
   },
+  "homepage": "https://www.vaxys.com.br/",
+  "author": "Luan Marchi",
   "private": true
 }
