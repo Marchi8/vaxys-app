@@ -15,6 +15,13 @@
       "**/*"
     ],
     "ios": {
+      "infoPlist": {
+        "UIBackgroundModes": [
+          "fetch",
+          "remote-notification"
+        ],
+        "NSUserTrackingUsageDescription": "Vaxys utiliza o framework AppTrackingTransparency para coletar dados de uso e comportamento para entregar conteúdos personalizados para você."
+      },
       "supportsTablet": true,
       "bundleIdentifier": "com.vaxysdev.vaxys"
     },
@@ -47,6 +54,20 @@
       "url": "https://u.expo.dev/c0a5b550-8e5e-43ca-95a2-c091baaa0a73"
     },
     "plugins": [
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "compileSdkVersion": 33,
+            "targetSdkVersion": 33,
+            "buildToolsVersion": "33.0.0"
+          },
+          "ios": {
+            "useFrameworks": "static",
+            "deploymentTarget": "13.4"
+          }
+        }
+      ],
       [
         "expo-tracking-transparency",
         {
