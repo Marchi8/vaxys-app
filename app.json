@@ -55,6 +55,13 @@
     },
     "plugins": [
       [
+        "expo-notifications",
+        {
+          "icon": "./assets/icon.png",
+          "color": "#077067"
+        }
+      ],
+      [
         "expo-build-properties",
         {
           "android": {
