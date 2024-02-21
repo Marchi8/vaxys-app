@@ -20,8 +20,11 @@ Notifications.requestPermissionsAsync().then((status) => {
 });
 
 export default function Home({ navigation }) {
-  const notificationListener = useRef();
-  const responseListener = useRef();
+  const notificationListener = React.useRef();
+  const responseListener = React.useRef();
+
+  const [expoPushToken, setExpoPushToken] = React.useState("");
+  const [notification, setNotification] = React.useState(false);
 
   const handleCallNotification = async () => {
     let token;
@@ -41,9 +44,10 @@ export default function Home({ navigation }) {
     } else {
       return;
     }
-
     return token;
   };
+
+  console.log("expoPushToken ==>", expoPushToken);
 
   React.useEffect(() => {
     handleCallNotification().then((token) => setExpoPushToken(token));
@@ -57,22 +61,6 @@ export default function Home({ navigation }) {
       Notifications.addNotificationResponseReceivedListener((response) => {
         console.log(response);
       });
-
-    messaging()
-      .getInitialNotification()
-      .then((remoteMessage) => {
-        if (remoteMessage) {
-          return;
-        }
-      });
-
-    messaging().onNotificationOpenedApp(async (remoteMessage) => {
-      return;
-    });
-
-    messaging().setBackgroundMessageHandler(async (remoteMessage) => {
-      return;
-    });
 
     return () => {
       Notifications.removeNotificationSubscription(
