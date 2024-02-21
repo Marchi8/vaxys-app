@@ -94,7 +94,7 @@ export default function Home({ navigation }) {
   };
 
   React.useEffect(() => {
-    getTrackPermission();
+    // getTrackPermission();
     const backHandler = BackHandler.addEventListener(
       "hardwareBackPress",
       handleBackPress

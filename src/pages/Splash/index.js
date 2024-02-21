@@ -7,7 +7,7 @@ import Splash_logo from "../../../assets/Splash_logo.js";
 export default function Splash({ navigation }) {
   const redirectUser = async () => {
     setTimeout(() => {
-      navigation.navigate("Home");
+      navigation.navigate("Start");
     }, 2000);
   };
 
