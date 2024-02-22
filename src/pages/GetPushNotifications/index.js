@@ -1,14 +1,7 @@
 import * as React from "react";
-import {
-  Platform,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from "react-native";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { vh, vw } from "react-native-expo-viewport-units";
 import * as Animatable from "react-native-animatable";
-import { requestTrackingPermissionsAsync } from "expo-tracking-transparency";
 import * as Notifications from "expo-notifications";
 import * as Device from "expo-device";
 
@@ -24,6 +17,11 @@ export default function GetPushNotifications({ navigation }) {
 
     Notifications.requestPermissionsAsync().then((status) => {
       console.log(status);
+
+      if (status.granted) {
+        navigation.navigate("GetCookies");
+      }
+
       return;
     });
   };
