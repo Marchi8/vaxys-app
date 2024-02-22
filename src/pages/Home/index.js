@@ -2,10 +2,6 @@ import * as React from "react";
 import { StyleSheet, View, BackHandler } from "react-native";
 import { WebView } from "react-native-webview";
 import Constants from "expo-constants";
-import { requestTrackingPermissionsAsync } from "expo-tracking-transparency";
-import { Platform } from "react-native";
-import * as Notifications from "expo-notifications";
-import * as Device from "expo-device";
 
 export default function Home({ navigation }) {
   const handleBackPress = () => {
