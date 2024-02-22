@@ -4,7 +4,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { NavigationContainer } from "@react-navigation/native";
 import Home from "./src/pages/Home";
 import Splash from "./src/pages/Splash";
-import Start from "./src/pages/Start";
+import GetCookies from "./src/pages/GetCookies";
 
 const Stack = createNativeStackNavigator();
 
@@ -23,7 +23,7 @@ export default function App() {
         />
         <Stack.Screen
           name="Start"
-          component={Start}
+          component={GetCookies}
           options={{ headerShown: false }}
         />
         <Stack.Screen

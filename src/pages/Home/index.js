@@ -49,26 +49,26 @@ export default function Home({ navigation }) {
 
   console.log("expoPushToken ==>", expoPushToken);
 
-  React.useEffect(() => {
-    handleCallNotification().then((token) => setExpoPushToken(token));
+  // React.useEffect(() => {
+  //   handleCallNotification().then((token) => setExpoPushToken(token));
 
-    notificationListener.current =
-      Notifications.addNotificationReceivedListener((notification) => {
-        setNotification(notification);
-      });
+  //   notificationListener.current =
+  //     Notifications.addNotificationReceivedListener((notification) => {
+  //       setNotification(notification);
+  //     });
 
-    responseListener.current =
-      Notifications.addNotificationResponseReceivedListener((response) => {
-        console.log(response);
-      });
+  //   responseListener.current =
+  //     Notifications.addNotificationResponseReceivedListener((response) => {
+  //       console.log(response);
+  //     });
 
-    return () => {
-      Notifications.removeNotificationSubscription(
-        notificationListener.current
-      );
-      Notifications.removeNotificationSubscription(responseListener.current);
-    };
-  }, []);
+  //   return () => {
+  //     Notifications.removeNotificationSubscription(
+  //       notificationListener.current
+  //     );
+  //     Notifications.removeNotificationSubscription(responseListener.current);
+  //   };
+  // }, []);
 
   const handleBackPress = () => {
     if (navigation.isFocused()) {
@@ -78,23 +78,7 @@ export default function Home({ navigation }) {
     return false;
   };
 
-  const getTrackPermission = async () => {
-    try {
-      if (Platform.OS === "ios") {
-        let { status: trackStatus } = await requestTrackingPermissionsAsync();
-
-        if (trackStatus === "granted") {
-          console.log("Yay! Tenho permissão do usuário para rastrear dados");
-          return;
-        }
-      }
-    } catch (e) {
-      return e;
-    }
-  };
-
   React.useEffect(() => {
-    // getTrackPermission();
     const backHandler = BackHandler.addEventListener(
       "hardwareBackPress",
       handleBackPress
