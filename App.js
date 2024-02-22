@@ -5,6 +5,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import Home from "./src/pages/Home";
 import Splash from "./src/pages/Splash";
 import GetCookies from "./src/pages/GetCookies";
+import GetPushNotifications from "./src/pages/GetPushNotifications";
 
 const Stack = createNativeStackNavigator();
 
@@ -22,8 +23,13 @@ export default function App() {
           options={{ headerShown: false }}
         />
         <Stack.Screen
-          name="Start"
+          name="GetCookies"
           component={GetCookies}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="GetPushNotifications"
+          component={GetPushNotifications}
           options={{ headerShown: false }}
         />
         <Stack.Screen
