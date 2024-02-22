@@ -10,13 +10,7 @@ import { vh, vw } from "react-native-expo-viewport-units";
 import * as Animatable from "react-native-animatable";
 import { requestTrackingPermissionsAsync } from "expo-tracking-transparency";
 
-export default function Start({ navigation }) {
-  const redirectUser = async () => {
-    // setTimeout(() => {
-    //   navigation.navigate("Home");
-    // }, 2000);
-  };
-
+export default function GetCookies({ navigation }) {
   const getTrackPermission = async () => {
     try {
       if (Platform.OS === "ios") {
@@ -38,20 +32,19 @@ export default function Start({ navigation }) {
     }
   };
 
-  React.useEffect(() => {
-    redirectUser();
-  }, []);
-
   return (
     <View style={styles.container}>
       <Animatable.View animation="zoomIn" duration={3000}>
-        <Text>Bem vindo ao App da Vaxys</Text>
-        <Text>Vaxys Utiliza Cookies para personalizar sua experiência</Text>
-        <Text>Clique no botão abaixo para permitir o uso de cookies</Text>
+        <Text style={{ color: "#ffff" }}>
+          Vaxys Utiliza Cookies para personalizar sua experiência;
+        </Text>
+        <Text style={{ color: "#ffff" }}>
+          Clique no botão abaixo para permitir o uso de cookies.
+        </Text>
       </Animatable.View>
 
       <TouchableOpacity onPress={getTrackPermission}>
-        <Text>Permitir Cookies</Text>
+        <Text style={{ color: "#ffff" }}>Permitir Cookies</Text>
       </TouchableOpacity>
     </View>
   );
