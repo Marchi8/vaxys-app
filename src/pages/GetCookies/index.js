@@ -43,7 +43,10 @@ export default function GetCookies({ navigation }) {
         </Text>
       </Animatable.View>
 
-      <TouchableOpacity onPress={getTrackPermission}>
+      <TouchableOpacity
+        style={{ backgroundColor: "#077067" }}
+        onPress={getTrackPermission}
+      >
         <Text style={{ color: "#ffff" }}>Permitir Cookies</Text>
       </TouchableOpacity>
     </View>
@@ -55,7 +58,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#077067",
+    backgroundColor: "#191919",
     width: vw(100),
     height: vh(100),
   },

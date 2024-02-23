@@ -80,15 +80,18 @@ export default function GetPushNotifications({ navigation }) {
     <View style={styles.container}>
       <Animatable.View animation="zoomIn" duration={3000}>
         <Text style={{ color: "#ffff" }}>
-          Vaxys deseja enviar notificações sobre atualizações;
+          Vaxys deseja enviar notificações;
         </Text>
         <Text style={{ color: "#ffff" }}>
-          Clique no botão para permitir o envio de notificações para seu
+          Clique no botão abaixo para permitir o envio de notificações para seu
           dispositivo.
         </Text>
       </Animatable.View>
 
-      <TouchableOpacity onPress={getPushPermission}>
+      <TouchableOpacity
+        style={{ backgroundColor: "#077067" }}
+        onPress={getPushPermission}
+      >
         <Text style={{ color: "#ffff" }}>Permitir notificações</Text>
       </TouchableOpacity>
     </View>
@@ -100,7 +103,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#077067",
+    backgroundColor: "#191919",
     width: vw(100),
     height: vh(100),
   },
