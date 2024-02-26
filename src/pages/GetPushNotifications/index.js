@@ -1,5 +1,13 @@
 import * as React from "react";
-import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import {
+  Alert,
+  Image,
+  Linking,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import { vh, vw } from "react-native-expo-viewport-units";
 import * as Animatable from "react-native-animatable";
 import * as Notifications from "expo-notifications";
@@ -21,6 +29,22 @@ export default function GetPushNotifications({ navigation }) {
 
       if (status.granted) {
         navigation.navigate("GetCookies");
+      }
+
+      if (status.status == "denied") {
+        Notifications.requestPermissionsAsync();
+        Alert.alert(
+          "Ir para configurações",
+          "Como você não permitiu o envio de notificações anteriormente, é necessário permitir nas configurações do seu dispositivo",
+          [
+            {
+              text: "Cancel",
+              onPress: () => console.log("Cancel Pressed"),
+              style: "cancel",
+            },
+            { text: "OK", onPress: () => Linking.openURL("app-settings:") },
+          ]
+        );
       }
 
       return;
