@@ -25,8 +25,6 @@ export default function GetPushNotifications({ navigation }) {
     });
 
     Notifications.requestPermissionsAsync().then((status) => {
-      console.log(status);
-
       if (status.granted) {
         navigation.navigate("GetCookies");
       }
