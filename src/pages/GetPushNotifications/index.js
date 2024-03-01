@@ -140,7 +140,7 @@ export default function GetPushNotifications({ navigation }) {
             fontWeight: "500",
           }}
         >
-          Clique no botão abaixo para permitir o envio de notificações para seu
+          Clique abaixo para permitir o envio de notificações para seu
           dispositivo.
         </Text>
       </View>
