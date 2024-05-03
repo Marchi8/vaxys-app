@@ -1,5 +1,6 @@
 import * as React from "react";
 import {
+  Image,
   Platform,
   StyleSheet,
   Text,
@@ -9,6 +10,7 @@ import {
 import { vh, vw } from "react-native-expo-viewport-units";
 import * as Animatable from "react-native-animatable";
 import { requestTrackingPermissionsAsync } from "expo-tracking-transparency";
+import adaptive_icon from "../../../assets/adaptive-icon.png";
 
 export default function GetCookies({ navigation }) {
   const getTrackPermission = async () => {
@@ -33,23 +35,72 @@ export default function GetCookies({ navigation }) {
   };
 
   return (
-    <View style={styles.container}>
-      <Animatable.View animation="zoomIn" duration={3000}>
-        <Text style={{ color: "#ffff" }}>
+    <Animatable.View
+      style={styles.container}
+      animation="fadeIn"
+      duration={3000}
+    >
+      <Image
+        style={{ width: 180, height: 70, top: 40, position: "absolute" }}
+        source={adaptive_icon}
+      />
+      <View
+        style={{
+          alignItems: "center",
+          justifyContent: "flex-start",
+          height: 200,
+          width: 300,
+          marginBottom: 50,
+          marginTop: 80,
+        }}
+      >
+        <Text
+          style={{
+            color: "#ffff",
+            fontSize: 20,
+            textAlign: "center",
+            marginBottom: 50,
+            fontWeight: "700",
+          }}
+        >
           Vaxys Utiliza Cookies para personalizar sua experiência;
         </Text>
-        <Text style={{ color: "#ffff" }}>
+        <Text
+          style={{
+            color: "#ffff",
+            fontSize: 19,
+            textAlign: "center",
+            fontWeight: "500",
+          }}
+        >
           Clique no botão abaixo para permitir o uso de cookies.
         </Text>
-      </Animatable.View>
+      </View>
 
       <TouchableOpacity
-        style={{ backgroundColor: "#077067" }}
+        style={{
+          backgroundColor: "#077067",
+          alignItems: "center",
+          justifyContent: "center",
+          textAlign: "center",
+          width: 200,
+          height: 45,
+          borderRadius: 10,
+        }}
         onPress={getTrackPermission}
       >
-        <Text style={{ color: "#ffff" }}>Permitir Cookies</Text>
+        <Text
+          style={{
+            color: "#ffff",
+            fontSize: 19,
+            fontWeight: "500",
+            textAlign: "center",
+          }}
+        >
+          Permitir Cookies
+        </Text>
       </TouchableOpacity>
-    </View>
+    </Animatable.View>
   );
 }
 

@@ -40,7 +40,7 @@
       [
         "expo-tracking-transparency",
         {
-          "userTrackingPermission": "NuRotulo utiliza o framework AppTrackingTransparency para coletar dados de uso e comportamento para entregar conteúdos personalizados para você."
+          "userTrackingPermission": "Vaxys utiliza o framework AppTrackingTransparency para coletar dados de uso e comportamento para entregar conteúdos personalizados para você."
         }
       ]
     ]
