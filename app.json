@@ -2,7 +2,7 @@
   "expo": {
     "name": "Vaxys",
     "slug": "vaxys",
-    "version": "1.0.6",
+    "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -19,11 +19,10 @@
         "UIBackgroundModes": [
           "fetch",
           "remote-notification"
-        ],
-        "NSUserTrackingUsageDescription": "Vaxys utiliza o framework AppTrackingTransparency para coletar dados de uso e comportamento para entregar conteúdos personalizados para você."
+        ]
       },
       "supportsTablet": true,
-      "bundleIdentifier": "com.vaxysdev.vaxys"
+      "bundleIdentifier": "com.vaxys"
     },
     "android": {
       "versionCode": 8,
@@ -36,14 +35,14 @@
         "foregroundImage": "./assets/icon.png",
         "backgroundColor": "#077067"
       },
-      "package": "com.vaxysdev.vaxys"
+      "package": "com.vaxys"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
     "extra": {
       "eas": {
-        "projectId": "c0a5b550-8e5e-43ca-95a2-c091baaa0a73"
+        "projectId": "831891df-cd26-4159-bf77-1f9636776e61"
       }
     },
     "owner": "vaxys-dev",

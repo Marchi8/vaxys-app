@@ -35,16 +35,6 @@
     "react-native-web": "~0.19.6",
     "react-native-webview": "13.2.2"
   },
-  "expo": {
-    "plugins": [
-      [
-        "expo-tracking-transparency",
-        {
-          "userTrackingPermission": "Vaxys utiliza o framework AppTrackingTransparency para coletar dados de uso e comportamento para entregar conteúdos personalizados para você."
-        }
-      ]
-    ]
-  },
   "devDependencies": {
     "@babel/core": "^7.20.0"
   },

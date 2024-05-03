@@ -7,7 +7,7 @@ import Splash_logo from "../../../assets/Splash_logo.js";
 export default function Splash({ navigation }) {
   const redirectUser = async () => {
     setTimeout(() => {
-      navigation.navigate("GetPushNotifications");
+      navigation.navigate("Home");
     }, 2000);
   };
 
