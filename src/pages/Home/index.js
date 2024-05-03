@@ -28,9 +28,9 @@ export default function Home({ navigation }) {
           javaScriptEnabled
           domStorageEnabled
           geolocationEnabled={true}
-          allowsCameraAccess={true}
+          // allowsCameraAccess={true}
           startInLoadingState={true}
-          originWhitelist={["https://*", "http://*", "*"]}
+          // originWhitelist={["https://*", "http://*", "*"]}
           source={{ uri: "https://www.vaxys.com.br" }}
           style={styles.webview}
         />
