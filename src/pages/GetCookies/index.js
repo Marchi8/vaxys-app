@@ -17,7 +17,7 @@ export default function GetCookies({ navigation }) {
     try {
       if (Platform.OS === "ios") {
         let { status: trackStatus } = await requestTrackingPermissionsAsync();
-
+        console.log(trackStatus);
         if (trackStatus !== "granted") {
           console.log("Não tenho permissão do usuário para rastrear dados");
 

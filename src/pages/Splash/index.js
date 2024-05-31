@@ -8,6 +8,7 @@ export default function Splash({ navigation }) {
   const redirectUser = async () => {
     setTimeout(() => {
       navigation.navigate("Home");
+      // navigation.navigate("GetCookies");
     }, 2000);
   };
 
