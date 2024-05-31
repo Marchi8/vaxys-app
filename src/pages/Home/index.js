@@ -1,7 +1,8 @@
 import * as React from "react";
-import { StyleSheet, View, BackHandler } from "react-native";
+import { StyleSheet, View, BackHandler, Platform } from "react-native";
 import { WebView } from "react-native-webview";
 import Constants from "expo-constants";
+import { requestTrackingPermissionsAsync } from "expo-tracking-transparency";
 
 export default function Home({ navigation }) {
   const handleBackPress = () => {
@@ -11,6 +12,36 @@ export default function Home({ navigation }) {
     }
     return false;
   };
+
+  const getTrackPermission = async () => {
+    try {
+      if (Platform.OS === "ios") {
+        let { status: trackStatus } = await requestTrackingPermissionsAsync();
+        console.log(trackStatus);
+        if (trackStatus !== "granted") {
+          // let = await requestTrackingPermissionsAsync();
+          console.log("Não tenho permissão do usuário para rastrear dados");
+
+          await requestTrackingPermissionsAsync();
+        }
+        if (trackStatus === "granted") {
+          console.log("Yay! Tenho permissão do usuário para rastrear dados");
+
+          // return navigation.navigate("Home");
+        }
+      }
+    } catch (e) {
+      return e;
+    }
+  };
+
+  React.useEffect(() => {
+    const trackPermissionTimeOut = setTimeout(async () => {
+      await getTrackPermission();
+    }, 2000);
+
+    return () => clearTimeout(trackPermissionTimeOut);
+  }, []);
 
   React.useEffect(() => {
     const backHandler = BackHandler.addEventListener(
