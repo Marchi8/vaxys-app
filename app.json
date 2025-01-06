@@ -25,7 +25,7 @@
       "bundleIdentifier": "com.vaxys"
     },
     "android": {
-      "versionCode": 9,
+      "versionCode": 10,
       "minSdkVersion": 24,
       "targetSdkVersion": 34,
       "permissions": [
