@@ -35,7 +35,7 @@
         "foregroundImage": "./assets/icon.png",
         "backgroundColor": "#077067"
       },
-      "package": "com.vaxys"
+      "package": "com.vaxysdev.vaxys"
     },
     "web": {
       "favicon": "./assets/favicon.png"
